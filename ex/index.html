@@ -20,9 +20,15 @@
         h1 {
             color: #ff4500;
             font-size: 40px;
-            margin: 20px 0;
+             margin: 0; /* Remove default margin around heading */
+             position: fixed; /* Fix the heading to the top */
+             top: 0; /* Align it to the top */
+            left: 0; /* Align it to the left */
+             width: 100%; /* Make sure it spans the full width */
+             text-align: center; /* Center the text */
+             background-color: #fff; /* Optional: add a background to avoid overlapping content */
+             z-index: 1000; /* Optional: ensure it sits on top of other content */
         }
-
         .content {
             display: flex;
             flex-direction: column;
