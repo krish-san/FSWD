@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/public/style.css">
     <title>Login</title>
 </head>
 <body>
     <h1>Login</h1>
-    <form action="/auth/login" method="POST">
+    <form action="/views/index.html" method="POST">
         <label for="username">Username:</label>
         <input type="text" id="username" name="username" required>
         <br>
@@ -17,6 +17,6 @@
         <br>
         <button type="submit">Login</button>
     </form>
-    <p>Don't have an account? <a href="/auth/register">Register here</a>.</p>
+    <p>Don't have an account? <a href="/views/register.html">Register here</a>.</p>
 </body>
 </html>
