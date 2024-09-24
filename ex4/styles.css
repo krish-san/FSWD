@@ -1,42 +1,122 @@
+/* Reset some default styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f0f4f8;
 }
 
+/* Header styling */
 header {
-    background-color: #ff6347;
+    background-color: #4a90e2;
     color: white;
     text-align: center;
     padding: 20px 0;
 }
 
-h2 {
-    margin: 20px 0;
-}
-
-#restaurant-list {
+/* Main content styling */
+main {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
     padding: 20px;
 }
 
-.restaurant {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-bottom: 15px;
-    padding: 15px;
-    text-align: center;
+/* Layout for content */
+.content {
+    display: flex;
+    width: 100%;
 }
 
+/* Styles for the restaurant list */
+#restaurant-list {
+    width: 60%;
+    padding-right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Styles for the cart */
+#cart {
+    width: 40%;
+    padding: 15px;
+    background-color: #ffffff;
+    border: 1px solid #eaeaea;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Restaurant card styling */
+.restaurant-card {
+    background-color: #ffffff;
+    border: 1px solid #eaeaea;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.restaurant-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Menu items styling */
+h4 {
+    margin: 10px 0;
+}
+
+/* Center the bullet points */
+.restaurant-card ul {
+    list-style-type: disc; /* Use disc bullets */
+    padding-left: 0; /* Remove left padding */
+    text-align: center; /* Center the text */
+}
+
+.restaurant-card li {
+    display: block; /* Ensure list items are block elements */
+    margin: 5px 0; /* Space between items */
+}
+
+/* Styles for cart items */
+.cart-item {
+    margin-top: 5px;
+}
+
+/* Styles for the total price */
+.total {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Button styles */
 button {
-    padding: 10px;
-    background-color: #28a745;
-    color: white;
+    background-color: #e63946;
+    color: #fff;
     border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 button:hover {
-    background-color: #218838;
+    background-color: #d62839;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+    }
+
+    #restaurant-list, #cart {
+        width: 100%;
+    }
+
+    #cart {
+        margin-top: 20px;
+    }
 }
