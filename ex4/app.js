@@ -36,18 +36,22 @@ function displayRestaurants() {
         const restaurantItem = document.createElement('div');
         restaurantItem.className = 'restaurant-item';
         restaurantItem.innerText = restaurant.name;
-        restaurantItem.onclick = () => displayMenu(restaurant.menu);
+        restaurantItem.onclick = () => displayMenu(restaurant);
         restaurantContainer.appendChild(restaurantItem);
     });
 }
 
 // Display menu items for selected restaurant
-function displayMenu(menu) {
+function displayMenu(restaurant) {
     const menuContainer = document.getElementById('menu-container');
-    menuContainer.innerHTML = '';
-    menuContainer.style.display = 'block';
+    const menuItems = document.getElementById('menu-items');
+    menuItems.innerHTML = '';
 
-    menu.forEach(item => {
+    menuContainer.style.display = 'block';
+    document.getElementById('restaurant-container').style.display = 'none';
+    document.getElementById('back-button').style.display = 'block';
+
+    restaurant.menu.forEach(item => {
         const menuItem = document.createElement('div');
         menuItem.className = 'menu-item';
         menuItem.innerHTML = `
@@ -58,10 +62,8 @@ function displayMenu(menu) {
                 <button onclick="addToCart(${item.id})">Add to Cart</button>
             </div>
         `;
-        menuContainer.appendChild(menuItem);
+        menuItems.appendChild(menuItem);
     });
-
-    document.getElementById('restaurant-container').style.display = 'none';
 }
 
 // Add item to cart
@@ -75,6 +77,13 @@ function addToCart(id) {
 function updateCartInfo() {
     document.getElementById('cart-count').innerText = cart.length;
 }
+
+// Handle back button
+document.getElementById('back-button').onclick = () => {
+    document.getElementById('menu-container').style.display = 'none';
+    document.getElementById('restaurant-container').style.display = 'block';
+    document.getElementById('back-button').style.display = 'none';
+};
 
 // Handle checkout button
 document.getElementById('checkout-button').onclick = () => {
@@ -129,5 +138,3 @@ document.getElementById('pay-button').onclick = () => {
 
 // Initialize app
 displayRestaurants();
-
-
