@@ -17,7 +17,7 @@ const restaurants = [
     },
     {
         id: 3,
-        name: 'Sushi Corner',
+        name: 'Japanese Bites',
         menu: [
             { id: 5, name: 'Sushi', price: 14.99, img: 'sushi.jpeg' },
             { id: 6, name: 'Sashimi', price: 16.99, img: 'sashimi.jpeg' },
