@@ -1,81 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #eaeaea;
-            color: #333;
-            margin: 0;
-            padding: 20px;
-            text-align: center;
-        }
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #121212;
+    color: #ffffff;
+}
 
-        .container {
-            max-width: 500px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
+/* Authentication Page Styles */
+.auth-container {
+    background-color: #333;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
+}
 
-        h1 {
-            color: #333;
-            margin-bottom: 20px;
-            font-size: 2em;
-        }
+.auth-container h2 {
+    margin-bottom: 1rem;
+}
 
-        input[type="text"] {
-            width: calc(100% - 110px);
-            padding: 10px;
-            font-size: 16px;
-            border: 2px solid #ddd;
-            border-radius: 5px;
-            margin-right: 10px;
-        }
+.auth-container input {
+    width: 100%;
+    padding: 0.8rem;
+    margin: 0.5rem 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #222;
+    color: #ddd;
+}
 
-        button {
-            padding: 10px 20px;
-            font-size: 16px;
-            background-color: #4caf50;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s, transform 0.2s;
-        }
+.auth-container button {
+    width: 100%;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #6200ea;
+    color: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
 
-        button:hover {
-            background-color: #45a049;
-            transform: scale(1.05);
-        }
+.auth-container button:hover {
+    background-color: #3700b3;
+}
 
-        ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 20px 0 0;
-        }
+#authToggle {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+    color: #03dac6;
+}
 
-        li {
-            padding: 15px;
-            margin: 10px 0;
-            border-radius: 5px;
-            background-color: #f9f9f9;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 16px;
-        }
+#authToggle:hover {
+    color: #018786;
+}
 
-        .delete {
-            background-color: #e53935;
-            border: none;
-            color: #fff;
-            padding: 5px 10px;
-            border-radius: 3px;
-            cursor: pointer;
-            transition: background-color 0.3s, transform 0.2s;
-        }
+/* To-Do List Page Styles */
+.container {
+    background-color: #333;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 400px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
 
-        .delete:hover {
-            background-color: #d32f2f;
-            transform: scale(1.05);
-        }
+h1 {
+    margin-bottom: 1rem;
+}
+
+#taskInput {
+    width: calc(100% - 20px);
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #222;
+    color: #ddd;
+}
+
+button {
+    padding: 0.8rem;
+    margin-top: 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #03dac6;
+    color: #121212;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #018786;
+}
+
+.logout {
+    background-color: #bb86fc;
+    margin-top: 2rem;
+}
+
+.logout:hover {
+    background-color: #6200ea;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    padding: 0.8rem;
+    margin: 0.5rem 0;
+    background-color: #222;
+    color: #ddd;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.delete {
+    background-color: #cf6679;
+    color: #121212;
+    border: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.delete:hover {
+    background-color: #b00020;
+}
