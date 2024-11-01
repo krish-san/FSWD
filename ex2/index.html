@@ -5,14 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-Do List</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <div class="container">
+    <!-- Registration & Login Page -->
+    <div class="auth-container" id="authPage">
+        <h2 id="authTitle">Login</h2>
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+        <button onclick="authenticate()">Submit</button>
+        <p id="authToggle" onclick="toggleAuthMode()">Don't have an account? Register</p>
+    </div>
+
+    <!-- To-Do List Page -->
+    <div class="container" id="todoPage" style="display: none;">
         <h1>To-Do List</h1>
         <input type="text" id="taskInput" placeholder="Enter a new task">
         <button onclick="addTask()">Add Task</button>
         <ul id="taskList"></ul>
+        <button onclick="logout()" class="logout">Logout</button>
     </div>
 </body>
 </html>
