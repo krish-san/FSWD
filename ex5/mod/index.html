@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy and Sell Used Products</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="navbar">
+        <h1>Buy & Sell Used Products</h1>
+        <button onclick="showSection('sellProduct')">Sell Your Product</button>
+        <button onclick="showSection('cart')">Cart</button>
+        <button onclick="showSection('availableProducts')">Home</button>
+    </div>
+
+    <div id="login" class="section" style="display: block;">
+        <h2>Login</h2>
+        <input type="text" id="username" placeholder="Username" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <button onclick="login()">Login</button>
+    </div>
+
+    <div id="availableProducts" class="section">
+        <h2>Available Products</h2>
+        <div id="productsList"></div>
+    </div>
+
+    <div id="sellProduct" class="section">
+        <h2>Sell Your Product</h2>
+        <input type="text" id="productName" placeholder="Product Name" required>
+        <input type="text" id="productDescription" placeholder="Product Description" required>
+        <input type="number" id="productPrice" placeholder="Product Price" required>
+        <input type="file" id="productImage" accept="image/*" required>
+        
+        <button onclick="sellProduct()">Sell Product</button>
+    </div>
+
+    <div id="cart" class="section">
+        <h2>Checkout</h2>
+        <div id="checkoutList"></div>
+        <div id="totalAmount"></div>
+        <input type="text" id="deliveryAddress" placeholder="Delivery Address" required>
+        <select id="paymentMethod">
+            <option value="cash">Cash</option>
+            <option value="card">Card</option>
+        </select>
+        <div id="cardDetails" style="display: none;">
+            <input type="text" id="cardNumber" placeholder="Card Number" required>
+            <input type="text" id="cardExpiry" placeholder="Expiry Date (MM/YY)" required>
+            <input type="text" id="cardCVV" placeholder="CVV" required>
+        </div>
+        <button onclick="checkout()">Submit Order</button>
+        
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
